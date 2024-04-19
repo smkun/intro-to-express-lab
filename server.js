@@ -86,7 +86,7 @@ app.get("/shoes", (req, res) => {
     if (filteredShoes.length) {
         res.json(filteredShoes);
     } else {
-        res.send("No shoes match your criteria.");
+        res.send("No shoes match your criteria!");
     }
 });
 

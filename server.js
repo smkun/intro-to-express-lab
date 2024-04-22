@@ -72,23 +72,7 @@ app.get("/collectibles/:index", (req, res) => {
 // Route for filtering shoes based on query parameters
 // Use example http://localhost:3000/shoes?type=sneaker
 
-app.get("/shoes", (req, res) => {
-    const { minPrice, maxPrice, type } = req.query;
-
-    let filteredShoes = shoes.filter((shoe) => {
-        return (
-            (minPrice ? shoe.price >= Number(minPrice) : true) &&
-            (maxPrice ? shoe.price <= Number(maxPrice) : true) &&
-            (type ? shoe.type === type : true)
-        );
-    });
-
-    if (filteredShoes.length) {
-        res.json(filteredShoes);
-    } else {
-        res.send("No shoes match your criteria!");
-    }
-});
+ NN;
 
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
